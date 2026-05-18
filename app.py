@@ -11,10 +11,12 @@ app.secret_key = "super_secret_key_2026"
 
 # 🔹 DATABASE CONNECTION
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root@123",
-    database="college_db"
+    host="mysql-2186cc50-college-enquiry-chatbot.e.aivencloud.com",
+    port="defaultdb",
+    user="avnadmin",
+    password="avnadmin",
+    database="defaultdb",
+    ssl_disabled=True
 )
 
 cursor = db.cursor(dictionary=True)
