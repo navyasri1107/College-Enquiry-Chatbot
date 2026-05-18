@@ -11,11 +11,11 @@ app.secret_key = "super_secret_key_2026"
 
 # 🔹 DATABASE CONNECTION
 db = mysql.connector.connect(
-    host="mysql-2186cc50-college-enquiry-chatbot.e.aivencloud.com",
-    port=int(18365),
-    user="avnadmin",
-    password="avnadmin",
-    database="defaultdb",
+    host=os.environ.get("DB_HOST"),
+    port=int(os.environ.get("DB_PORT")),
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    database=os.environ.get("DB_NAME"),
     ssl_disabled=True
 )
 
