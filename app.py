@@ -12,7 +12,7 @@ app.secret_key = "super_secret_key_2026"
 # 🔹 DATABASE CONNECTION
 db = mysql.connector.connect(
     host="mysql-2186cc50-college-enquiry-chatbot.e.aivencloud.com",
-    port="defaultdb",
+    port=int(18365),
     user="avnadmin",
     password="avnadmin",
     database="defaultdb",
