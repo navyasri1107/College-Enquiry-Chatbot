@@ -230,7 +230,9 @@ def forgot_password():
         )
 
        
-
+@app.errorhandler(Exception)
+def handle_error(e):
+    return f"Error: {str(e)}"
 # 🔹 RUN APP
 import os
 
